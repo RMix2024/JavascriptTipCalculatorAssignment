@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <!-- Link to external JavaScript file -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Tip Calculator</h1>
+
+    <!-- Form for user input -->
+    <form id="tipForm">
+        <!-- Input for service amount -->
+        <label for="amount">Enter Service Amount ($):</label>
+        <input type="number" id="amount" min="5" max="500" required>
+        <br><br>
+
+        <!-- Dropdown for service quality -->
+        <label for="quality">Select Service Quality:</label>
+        <select id="quality" required>
+            <option value="great">Great (20%)</option>
+            <option value="ok">OK (15%)</option>
+            <option value="poor">Poor (10%)</option>
+        </select>
+        <br><br>
+
+        <!-- Button to trigger tip calculation -->
+        <button type="button" onclick="calculateTip()">Calculate Tip</button>
+    </form>
+
+    <!-- Output section for results -->
+    <div id="output"></div>
+</body>
+</html>
